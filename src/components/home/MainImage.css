@@ -1,0 +1,45 @@
+.main-image {
+  position: relative;
+  max-width: 100%;
+  margin: 0rem 1rem;
+}
+
+.main-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.main-image > .main-description {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.main-image > .main-description > h4 {
+  width: 80%;
+  font-size: 2.5rem;
+  color: inherit;
+  font-weight: lighter;
+  margin: 0rem auto 0.6rem;
+}
+.main-image > .main-description > p {
+  width: 80%;
+  font-size: 1.25rem;
+  max-width: 100%;
+  margin: 0rem auto;
+}
+
+@media (max-width: 580px) {
+  .main-image > .main-description > h4 {
+    width: 90%;
+    font-size: calc(1.375rem + 1.5vw);
+  }
+  .main-image > .main-description > p {
+    display: none;
+  }
+}

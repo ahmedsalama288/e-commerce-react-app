@@ -1,0 +1,60 @@
+:root {
+  --main-header-font-color: black;
+  --header-background-color: #f8f9fa;
+  --logo-width: 233.25px;
+}
+header {
+  position: relative;
+  background-color: var(--header-background-color);
+  color: var(--main-header-font-color, black);
+}
+/* .............................. header-wrapper ............................. */
+.header-wrapper {
+  width: 1296px;
+  max-width: 100%;
+  height: 88px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-links-btns-containner > span {
+  display: none;
+}
+.navigation-links-btns-containner > span svg {
+  fill: var(--main-font-color);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.navigation-links-btns-containner {
+  display: flex;
+  width: calc(100% - var(--logo-width));
+}
+.navigation-links-btns-containner > nav {
+  flex: 2;
+}
+.navigation-links-btns-containner > .user-actions {
+  flex: 1;
+}
+
+@media (max-width: 1395px) {
+  .header-wrapper {
+    max-width: 90%;
+  }
+}
+@media (max-width: 990px) {
+  .header-wrapper {
+    width: 95%;
+    height: 74.72px;
+  }
+  .header-wrapper .user-actions,
+  .header-wrapper .main-nav {
+    display: none;
+  }
+  .navigation-links-btns-containner > span {
+    display: block;
+  }
+  .navigation-links-btns-containner {
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,94 @@
+.product-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1.7rem), 400px));
+  justify-content: center;
+  gap: 1.7rem;
+}
+
+/* ........... Product Image ........... */
+.product-info > .product-info-img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.3rem 0rem;
+}
+.product-info > .product-info-img-container img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ........... Product Detailed Info ........... */
+.product-info > .product-detailed-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-info > .product-detailed-info > #category {
+  color: #6c757d;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.product-info > .product-detailed-info > #title {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  color: var(--main-font-color);
+}
+.product-info > .product-detailed-info > #rating {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.product-info > .product-detailed-info > #rating > span:last-child {
+  height: 1.25rem;
+}
+.product-info > .product-detailed-info > #price {
+  font-size: 2.5rem;
+  color: var(--main-font-color);
+  font-weight: 300;
+  margin: 1.5rem 0rem;
+}
+.product-info > .product-detailed-info > #description {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* ........... Product Action Buttons ........... */
+.product-info > .product-detailed-info > #action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.product-info > .product-detailed-info > #action-buttons > a {
+  text-decoration: none;
+  color: inherit;
+}
+.product-info > .product-detailed-info > #action-buttons a:last-child button,
+.product-info > .product-detailed-info > #action-buttons button:hover {
+  background-color: var(--btn-hover-bg-color);
+  color: white;
+}
+@media (max-width: 768px) {
+  .product-info {
+    padding: 0rem 1rem;
+  }
+  .product-info > .product-detailed-info > #category {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  .product-info > .product-detailed-info > #title {
+    font-size: calc(1.425rem + 2.1vw);
+  }
+  .product-info > .product-detailed-info > #price {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+}

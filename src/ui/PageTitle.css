@@ -1,0 +1,26 @@
+.page-title {
+  width: 100%;
+}
+
+.page-title > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  color: var(--main-font-color);
+}
+
+.page-title > hr {
+  border: 0;
+  border-top: 1px solid;
+  color: var(--main-font-color);
+  opacity: 0.25;
+  margin: 1rem 0rem;
+}
+
+@media (max-width: 1200px) {
+  .page-title > h1 {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+}

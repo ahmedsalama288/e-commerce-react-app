@@ -1,0 +1,38 @@
+:root {
+  --btn-hover-bg-color: #212529;
+}
+.user-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.user-actions > a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0.5rem; */
+  padding: 0.3rem 0.6rem;
+}
+.user-actions > a.active > button,
+.user-actions > a > button:hover {
+  background-color: var(--btn-hover-bg-color);
+  color: white;
+}
+.user-actions > a > button > span {
+  height: 19px;
+}
+.user-actions > a > button > span:nth-child(1) > svg {
+  fill: black;
+  transition: all var(--main-btn-transition-time);
+}
+.user-actions > a > button:hover > span:nth-child(1) > svg,
+.user-actions > a.active > button > span:nth-child(1) > svg {
+  fill: white;
+}
+.user-actions > a > button > span#login-icon {
+  width: 16px;
+  height: 18px;
+}
+.user-actions > a > button > span#cart {
+  display: flex;
+}

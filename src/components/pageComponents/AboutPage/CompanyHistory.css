@@ -1,0 +1,8 @@
+.company-history {
+  color: var(--main-font-color);
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0rem 0.8rem;
+}

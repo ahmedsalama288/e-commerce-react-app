@@ -1,0 +1,46 @@
+.filler-sec {
+  width: 100%;
+  padding: 45px 0px;
+}
+
+.filler-sec > ul {
+  margin: 0px auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 100%;
+  gap: 1rem;
+}
+
+.filler-sec > ul > li > button {
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  border: 1px solid black;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+
+.filler-sec > ul > li > button:hover {
+  color: white;
+  background-color: var(--btn-hover-bg-color);
+  border-color: var(--btn-hover-bg-color);
+}
+
+.filler-sec > ul > li > button.active {
+  color: white;
+  background-color: var(--btn-hover-bg-color);
+  border-color: var(--btn-hover-bg-color);
+}
+
+@media (max-width: 400px) {
+  .filler-sec {
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
+  }
+}

@@ -1,0 +1,27 @@
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.input-container > label {
+  width: 100%;
+}
+.input-container > input {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid #ced4da;
+  outline-color: #ced4da;
+  color: var(--main-font-color);
+}
+.input-container > input:focus-visible {
+  border-color: #dce3eb;
+  outline-color: #dce3eb;
+}
+.input-container.non-valid > input {
+  border-color: #c90707de !important;
+  outline-color: #c90707de !important;
+}

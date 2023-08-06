@@ -1,0 +1,26 @@
+.main-nav{
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav > ul {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  list-style-type: none;
+}
+
+.main-nav > ul a{
+  text-decoration: none;
+  transition: 0.2s;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: rgba(0, 0, 0, 0.55);
+}
+.main-nav > ul a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.main-nav > ul a.active {
+  color: black;
+}

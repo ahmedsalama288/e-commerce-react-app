@@ -1,0 +1,55 @@
+.order-summary {
+  flex: 3 1;
+  height: fit-content;
+  padding: 1rem;
+  border: 1px solid #ebecec;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 900px) {
+  .order-summary {
+    width: 100%;
+  }
+}
+.order-summary h2 {
+  background-color: var(--header-background-color);
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--main-font-color);
+  border: 1px solid #ebecec;
+  border-bottom: none;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+.order-summary div {
+  padding: 0rem 0.3rem;
+}
+.order-summary p {
+  display: flex;
+  padding: 0.3rem 0rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-summary p:nth-child(2) {
+  margin-bottom: 0.6rem;
+}
+.order-summary #total-amount {
+  font-weight: bold;
+  padding: 1rem 0rem;
+  border-top: 1px solid #ebecec;
+  margin-bottom: 0.3rem;
+}
+.order-summary .go-to-checkout a {
+  text-decoration: none;
+}
+.order-summary .go-to-checkout a button {
+  background-color: var(--main-font-color);
+  color: white;
+}
+.order-summary .go-to-checkout a button:hover {
+  background-color: #424649;
+  border-color: #373b3e;
+}

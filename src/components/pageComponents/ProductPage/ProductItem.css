@@ -1,0 +1,99 @@
+.product-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-color: rgba(33, 37, 41, 0.25);
+  border-radius: 0.4rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+.product-item a {
+  max-width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-item .img-container {
+  width: 100%;
+  height: 300px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.product-item .img-container img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ........... item-title-description ........... */
+.product-item .item-title-description {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.product-item .item-title-description > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 13ch;
+  display: inline-block;
+  color: var(--main-font-color);
+}
+.product-item .item-title-description > p {
+  line-height: 1.5em;
+  height: 3em;
+  overflow: hidden;
+  color: var(--main-font-color);
+  padding: 0 0.4rem;
+  font-weight: 400;
+  text-align: center;
+}
+/* ........... [#End] item-title-description ........... */
+
+.product-item .product-price {
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: rgba(33, 37, 41, 0.25);
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.product-item .product-action-btns-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem;
+}
+.product-item .product-action-btns-container button {
+  background-color: var(--main-font-color);
+  color: white;
+}
+.product-item .product-action-btns-container button:hover {
+  background-color: #424649;
+  border-color: #373b3e;
+}
+
+@media (max-width: 400px) {
+  .product-item .img-container,
+  .product-item .item-title-description,
+  .product-item .product-action-btns-container {
+    padding: 1rem 0rem;
+  }
+  /* .product-item {
+    margin: 0rem 0.8rem;
+  } */
+  .product-item .img-container > img {
+    padding: 0rem 0.3rem;
+  }
+}

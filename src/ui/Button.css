@@ -1,0 +1,19 @@
+:root {
+  --main-btn-transition-time: 0.2s;
+}
+
+.main-btn {
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  padding: 8px 13px;
+  transition: all var(--main-btn-transition-time);
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}

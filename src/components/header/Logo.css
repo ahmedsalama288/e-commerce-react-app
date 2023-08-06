@@ -1,0 +1,15 @@
+.logo {
+  font-size: 23.91px;
+}
+
+.logo > a {
+  text-decoration: none;
+  margin-right: 2rem;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 21.81px;
+  }
+}
