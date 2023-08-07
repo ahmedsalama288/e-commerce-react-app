@@ -2,6 +2,7 @@
   position: relative;
   max-width: 100%;
   margin: 0rem 1rem;
+  margin-top: 5.5rem;
 }
 
 .main-image img {
@@ -32,6 +33,12 @@
   font-size: 1.25rem;
   max-width: 100%;
   margin: 0rem auto;
+}
+
+@media (max-width: 990px) {
+  .main-image {
+    margin-top: 4.7rem;
+  }
 }
 
 @media (max-width: 580px) {
