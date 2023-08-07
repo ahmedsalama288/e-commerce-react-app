@@ -1,0 +1,20 @@
+#icon-items-amount {
+  display: none;
+}
+@media (max-width: 990px) {
+  #icon-items-amount {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: white;
+    position: relative;
+    top: -7px;
+    left: -7px;
+    background-color: #212529d0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.6rem;
+  }
+}

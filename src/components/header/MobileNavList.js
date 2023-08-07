@@ -2,7 +2,12 @@ import CloseIcon from "./icons/CloseIcon";
 import { NavLink } from "react-router-dom";
 import "./MobileNavList.css";
 
+import { selectTotalProductsItemsAmount } from "../../redux/cartSlice";
+import { useSelector } from "react-redux";
+
 const MobileNavList = ({ isMobileNavCloseed, handleCloseNav }) => {
+  const itemsAmount = useSelector(selectTotalProductsItemsAmount);
+
   const handleUlItemClick = (event) => {
     // Check if the clicked element is an li
     console.log(event.target.tagName);
@@ -73,7 +78,7 @@ const MobileNavList = ({ isMobileNavCloseed, handleCloseNav }) => {
                 to="/cart"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
-                Cart
+                Cart{` (${itemsAmount})`}
               </NavLink>
             </li>
           </ul>
