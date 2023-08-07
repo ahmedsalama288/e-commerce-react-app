@@ -2,6 +2,7 @@ import MainImage from "../components/home/MainImage";
 import PageWrapper from "../ui/PageWrapper";
 import PageTitle from "../ui/PageTitle";
 import ProductList from "../components/pageComponents/ProductPage/ProductList";
+import "../components/home/HomePageWrapper.css"
 
 import { lazy } from "react";
 import { Await, useRouteLoaderData } from "react-router-dom";
@@ -17,7 +18,7 @@ const Home = () => {
   return (
     <>
       <MainImage />
-      <PageWrapper>
+      <PageWrapper className={"home-page-wrapper"}>
         <PageTitle pageTitleName="Latest Products" />
         <Suspense fallback={<ProductList />}>
           <Await resolve={productsList}>

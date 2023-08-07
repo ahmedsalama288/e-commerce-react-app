@@ -2,6 +2,7 @@
   width: 1296px;
   max-width: 100%;
   margin: 1rem auto;
+  margin-top: 7.5rem;
   padding: 1rem 0rem;
 }
 
@@ -9,6 +10,12 @@
 @media (max-width: 1395px) {
   .page-wrapper {
     width: 90%;
+  }
+}
+
+@media (max-width: 990px) {
+  .page-wrapper {
+    margin-top: 5.7rem;
   }
 }
 
