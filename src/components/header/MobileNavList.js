@@ -5,12 +5,15 @@ import "./MobileNavList.css";
 import { selectTotalProductsItemsAmount } from "../../redux/cartSlice";
 import { useSelector } from "react-redux";
 
-const MobileNavList = ({ isMobileNavCloseed, handleCloseNav }) => {
+const MobileNavList = ({
+  isUserLoggedIn,
+  isMobileNavCloseed,
+  handleCloseNav,
+}) => {
   const itemsAmount = useSelector(selectTotalProductsItemsAmount);
 
   const handleUlItemClick = (event) => {
     // Check if the clicked element is an li
-    console.log(event.target.tagName);
     if (event.target.tagName.toLowerCase() === "a") {
       setTimeout(() => {
         handleCloseNav();
@@ -57,22 +60,37 @@ const MobileNavList = ({ isMobileNavCloseed, handleCloseNav }) => {
                 Contact
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/login"
-                className={({ isActive }) => (isActive ? "active" : "")}
-              >
-                Login
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/register"
-                className={({ isActive }) => (isActive ? "active" : "")}
-              >
-                Register
-              </NavLink>
-            </li>
+            {!isUserLoggedIn && (
+              <>
+                <li>
+                  <NavLink
+                    to="/login"
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                  >
+                    Login
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/register"
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                  >
+                    Register
+                  </NavLink>
+                </li>
+              </>
+            )}
+            {isUserLoggedIn && (
+              <li>
+                <NavLink
+                  to="/logout"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  Logout
+                </NavLink>
+              </li>
+            )}
+
             <li>
               <NavLink
                 to="/cart"

@@ -3,14 +3,12 @@
 }
 .user-actions {
   display: flex;
-  justify-content: space-between;
 }
 .user-actions > a {
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin: 0.5rem; */
   padding: 0.3rem 0.6rem;
 }
 .user-actions > a.active > button,

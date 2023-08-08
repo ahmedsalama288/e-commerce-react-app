@@ -1,21 +1,33 @@
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useNavigate } from "react-router-dom";
 import Input from "../../../ui/Input";
 import Button from "../../../ui/Button";
 import "./LoginForm.css";
 import useInput from "../../../hooks/useInput";
+import { handleLogin } from "../../../utils/handleLogin";
 import { useState } from "react";
+
+import { userLogin } from "../../../redux/userSlice";
+import { useDispatch } from "react-redux";
 
 const inputVidation = (inputValue) => inputValue.trim() !== "";
 
 const LoginForm = () => {
   const [showIsVaild, setShowIsVaild] = useState(false);
-
   const userEmail = useInput("", inputVidation);
   const userPassword = useInput("", inputVidation);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleFormSubmition = (e) => {
     e.preventDefault();
     setShowIsVaild(true);
+
+    const isLoginSuccess = handleLogin(userEmail, userPassword);
+    if (isLoginSuccess) {
+      dispatch(userLogin());
+      navigate("/");
+    }
   };
 
   return (
@@ -50,3 +62,5 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+

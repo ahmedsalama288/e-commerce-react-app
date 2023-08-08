@@ -17,7 +17,11 @@ const useInput = (initialValue, checkInputValidation) => {
 
   const clearInputVlaue = () => {
     setValue("");
-    setIsValid(checkInputValidation(""))
+    setIsValid(checkInputValidation(""));
+  };
+
+  const changeIsValidState = (booleanValue) => {
+    setIsValid(booleanValue);
   };
 
   return {
@@ -25,6 +29,7 @@ const useInput = (initialValue, checkInputValidation) => {
     isValid,
     onChange: handleChange,
     showIsVaildInputValue,
+    changeIsValidState,
     clearInputVlaue,
   };
 };

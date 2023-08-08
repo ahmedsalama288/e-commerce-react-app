@@ -5,7 +5,8 @@ import Products, { getAllProductsLoader } from "./pages/Products";
 import ProductDetail, { productDetailLoader } from "./pages/ProductDetail";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import Login from "./pages/Login";
+import Login, { checkUserLoggedInLoader } from "./pages/Login";
+import Logout from "./pages/Logout";
 import Register from "./pages/Register";
 import Cart from "./pages/Cart";
 
@@ -18,7 +19,6 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-
         element: <Home />,
       },
 
@@ -47,10 +47,16 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+        loader: checkUserLoggedInLoader,
+      },
+      {
+        path: "/logout",
+        element: <Logout />,
       },
       {
         path: "/Register",
         element: <Register />,
+        loader: checkUserLoggedInLoader,
       },
       {
         path: "/Cart",
