@@ -1,0 +1,45 @@
+.billing-address-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-basis: 70%;
+  border: 1px solid #ebecec;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+@media (max-width: 990px) {
+  .billing-address-sec {
+    flex-basis: 100%;
+  }
+}
+.billing-address-sec h2 {
+  border: 1px solid #ebecec;
+  border-radius: 0.4rem;
+  padding: 0.6rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--main-font-color);
+  background-color: var(--header-background-color);
+}
+.billing-address-sec h2:nth-child(2) {
+  margin-top: 1rem;
+}
+.user-data-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #ebecec;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+
+.billing-address-sec button {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: var(--main-font-color);
+  color: white;
+}
+.billing-address-sec button:hover {
+  background-color: #424649;
+  border-color: #373b3e;
+}

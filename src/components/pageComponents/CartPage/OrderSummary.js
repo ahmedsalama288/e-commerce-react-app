@@ -8,14 +8,14 @@ import {
 } from "../../../redux/cartSlice";
 import { useSelector } from "react-redux";
 
-const OrderSummary = ({ showCheckoutButton = true }) => {
+const OrderSummary = ({ showCheckoutButton = true, className }) => {
   const totalProductsItemsAmount = useSelector(selectTotalProductsItemsAmount);
   const totalProductsPrice = useSelector(selectTotalPrice);
   const shippingPrice = 30;
   const totalAmoutPrice = totalProductsPrice + shippingPrice;
 
   return (
-    <section className="order-summary">
+    <section className={`order-summary ${className}`} >
       <h2>Order Summary</h2>
       <div>
         <p>
@@ -35,7 +35,7 @@ const OrderSummary = ({ showCheckoutButton = true }) => {
       </div>
       {showCheckoutButton && (
         <div className="go-to-checkout">
-          <Link>
+          <Link to="/checkout">
             <Button>Go to checkout</Button>
           </Link>
         </div>

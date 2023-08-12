@@ -1,0 +1,19 @@
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ebecec;
+  border-radius: 0.4rem;
+  gap: 1rem;
+}
+
+.payment-section > div {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 480px) {
+  .payment-section > div {
+    flex-direction: column;
+  }
+}
