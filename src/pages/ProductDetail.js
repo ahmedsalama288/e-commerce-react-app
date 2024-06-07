@@ -1,6 +1,7 @@
 import PageWrapper from "../ui/PageWrapper";
 import { lazy, Suspense } from "react";
 import { Await, defer, useLoaderData } from "react-router-dom";
+import { LoadingSpan } from "../ui/LoadingSpan";
 // import ProductInfo from "../components/pageComponents/ProductDetailPage/ProductInfo";
 const ProductInfoLazy = lazy(() =>
   import("../components/pageComponents/ProductDetailPage/ProductInfo")
@@ -11,7 +12,7 @@ const ProductDetail = () => {
 
   return (
     <PageWrapper>
-      <Suspense fallback={<p style={{ textAlign: "center" }}>Loading ...</p>}>
+      <Suspense fallback={<LoadingSpan/>}>
         <Await resolve={productData}>
           <ProductInfoLazy />
         </Await>
