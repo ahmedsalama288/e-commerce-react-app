@@ -1,5 +1,6 @@
 import PageWrapper from "../ui/PageWrapper";
 import PageTitle from "../ui/PageTitle";
+import { LoadingSpan } from "../ui/LoadingSpan";
 import { lazy, Suspense } from "react";
 const CompanyHistoryLazy = lazy(() =>
   import("../components/pageComponents/AboutPage/CompanyHistory")
@@ -12,7 +13,7 @@ const About = () => {
   return (
     <PageWrapper>
       <PageTitle pageTitleName="About Us" />
-      <Suspense fallback={<p style={{ textAlign: "center" }}>Loading...</p>}>
+      <Suspense fallback={<LoadingSpan />}>
         <CompanyHistoryLazy />
         <OurProductsLazy />
       </Suspense>
