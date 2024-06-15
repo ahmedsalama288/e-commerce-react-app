@@ -9,12 +9,10 @@ import { useState } from "react";
 import { userLogin } from "../../../redux/userSlice";
 import { useDispatch } from "react-redux";
 
-const inputVidation = (inputValue) => inputValue.trim() !== "";
-
 const LoginForm = () => {
   const [showIsVaild, setShowIsVaild] = useState(false);
-  const userEmail = useInput("", inputVidation);
-  const userPassword = useInput("", inputVidation);
+  const userEmail = useInput("");
+  const userPassword = useInput("");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

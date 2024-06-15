@@ -8,8 +8,6 @@ import "./RegisterPage.css";
 import { userLogin } from "../../../redux/userSlice";
 import { useDispatch } from "react-redux";
 
-const inputVidation = (inputValue) => inputValue.trim() !== "";
-
 const RegisterPage = () => {
   const [showIsVaild, setShowIsVaild] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -17,9 +15,9 @@ const RegisterPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const enteredUserName = useInput("", inputVidation);
-  const enteredUserEmail = useInput("", inputVidation);
-  const enteredUserPassword = useInput("", inputVidation);
+  const enteredUserName = useInput("");
+  const enteredUserEmail = useInput("");
+  const enteredUserPassword = useInput("");
 
   const addNewUser = () => {
     const newUser = {

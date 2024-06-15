@@ -1,24 +1,22 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 const defaultCheckInputValidation = (value) => value.trim() !== "";
 
 const useInput = (
   initialValue,
-  onChangeHandler,
   checkInputValidation = defaultCheckInputValidation
 ) => {
   const [value, setValue] = useState(initialValue);
   const [isValid, setIsValid] = useState(false);
 
-  const handleChange = (event) => {
-    let inputValue = "";
-
-    if (onChangeHandler) inputValue = onChangeHandler(event);
-    else inputValue = event.target.value;
-
-    setValue(inputValue);
-    setIsValid(checkInputValidation(inputValue));
-  };
+  const handleChange = useCallback(
+    (event) => {
+      const inputValue = event.target.value;
+      setValue(inputValue);
+      setIsValid(checkInputValidation(inputValue));
+    },
+    [checkInputValidation]
+  );
 
   const showIsVaildInputValue = (showIsVaild = true) => {
     if (showIsVaild) return isValid;
