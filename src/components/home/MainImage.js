@@ -1,7 +1,5 @@
 import HomeImage from "../../assets/main.png.avif";
 import PageWrapper from "../../ui/PageWrapper";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import "./MainImage.css";
 
 const MainImage = () => {
@@ -14,12 +12,8 @@ const MainImage = () => {
           to additional content. This content is a little bit longer.
         </p>
       </PageWrapper>
-      <LazyLoadImage
-        src={HomeImage}
-        alt="Description of the home"
-        effect="blur"
-        visibleByDefault={true}
-      />
+      
+      <img src={HomeImage} alt="main page hero" property="true"/>
     </section>
   );
 };
