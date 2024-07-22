@@ -1,4 +1,3 @@
-import HomeImage from "../../assets/main.png.avif";
 import PageWrapper from "../../ui/PageWrapper";
 import "./MainImage.css";
 
@@ -13,7 +12,7 @@ const MainImage = () => {
         </p>
       </PageWrapper>
       
-      <img src={HomeImage} alt="main page hero" property="true"/>
+      <img src="/main.png.avif" alt="main page hero" rel="preload"/>
     </section>
   );
 };
