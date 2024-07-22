@@ -1,6 +1,7 @@
 .main-image {
   position: relative;
   max-width: 100%;
+  height: 70vh;
   margin: 0rem 1rem;
   margin-top: 5.5rem;
 }
@@ -8,6 +9,8 @@
 .main-image img {
   width: 100%;
   border-radius: 6px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .main-image > .main-description {
